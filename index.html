@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw App</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    width: 310px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .3;
+    transition: opacity .5s;
+}
+.nav:hover{
+    opacity: 1;
+}
+input {
+    border: none;
+}
+.scale-hover:hover {
+    transition: all .5s;
+    transform: scale(1.1);
+}
+.clr{
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    border: 3px solid rgb(214, 214, 214);
+    transition: transform .5s;
+}
+
+
+button{
+    border: none;
+    outline: none;
+    padding: .6em 1em;
+    border-radius: 3px;
+    background-color: #03bb56;
+    color: #fff;
+}
+.save{
+    background-color: #0f65d4;
+}
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <canvas id="draw"></canvas>
+    <div class="nav">
+        <button class="clear">clear</button>
+        <button class="save">save</button>
+        <button class="erase"> Erase</button>
+        <input type="color" class="scale-hover"  id="color">
+    <input type="range" class="scale-hover" min="1" max="10" id="line-width">
+    </div>
+</body>
+</html>
